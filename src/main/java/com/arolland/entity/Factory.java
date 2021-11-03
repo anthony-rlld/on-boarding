@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import java.util.UUID;
 
 @MongoEntity(collection = "refFactories")
-public class FactoryEntity extends ReactivePanacheMongoEntity {
+public class Factory extends ReactivePanacheMongoEntity {
 
     @Id
     @Column(name = "_id")

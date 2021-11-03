@@ -1,6 +1,6 @@
 package com.arolland.controller;
 
-import com.arolland.entity.FactoryEntity;
+import com.arolland.entity.Factory;
 import com.arolland.service.FactoryService;
 import io.smallrye.mutiny.Uni;
 
@@ -19,7 +19,7 @@ public class FactoryController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Uni<?> getAll() {
+    public Uni<List<Factory>> getAll() {
         return factoryService.getAll();
     }
 }

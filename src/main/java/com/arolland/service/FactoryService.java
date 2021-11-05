@@ -7,6 +7,7 @@ import io.smallrye.mutiny.Uni;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
+import java.util.UUID;
 
 @ApplicationScoped
 public class FactoryService {
@@ -16,5 +17,9 @@ public class FactoryService {
 
     public Uni<List<Factory>> getAll() {
         return factoryRepository.listAll();
+    }
+
+    public Uni<Factory> getById(UUID uuid) {
+        return factoryRepository.findById(uuid);
     }
 }
